@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -11,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -63,7 +65,7 @@ public class FriendFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                addDateButton.setEnabled(true);
             }
         };
         TextWatcher lastWatcher = new TextWatcher() {
@@ -79,7 +81,7 @@ public class FriendFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                addDateButton.setEnabled(true);
             }
         };
         editTextFirst.addTextChangedListener(firstWatcher);
@@ -88,6 +90,17 @@ public class FriendFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 friend.setBestFriend(isChecked);
+            }
+        });
+        addDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext().getApplicationContext();
+                Toast interactiveToast = Toast.makeText(context,
+                        friend.getFname()+" "+friend.getLname(),
+                        Toast.LENGTH_SHORT);
+                interactiveToast.show();
+//                System.out.println(friend.getFname()+" "+friend.getLname());
             }
         });
     }
