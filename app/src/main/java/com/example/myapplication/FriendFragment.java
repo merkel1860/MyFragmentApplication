@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 import androidx.fragment.app.Fragment;
 
@@ -25,6 +29,7 @@ public class FriendFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         friend = new Friend();
+
     }
 
     @Override
@@ -32,12 +37,13 @@ public class FriendFragment extends Fragment {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_fragment_friend, container, false);
+
         editTextFirst = view.findViewById(R.id.edit_fname);
         editTextLast = view.findViewById(R.id.edit_lname);
         addDateButton = view.findViewById(R.id.button_add);
         addDateButton.setText(friend.getStartingDate().toString());
         addDateButton.setEnabled(false);
-solvedCheckBox = view.findViewById(R.id.friend_status);
+        solvedCheckBox = view.findViewById(R.id.friend_status);
         return view;
     }
 

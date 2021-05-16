@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.icu.util.LocaleData;
+
 import java.util.Date;
 
 public class Friend {
@@ -48,6 +50,7 @@ public class Friend {
         return  fname+" " +lname;
     }
     public Friend() {
+        startingDate = new Date();
     }
 
     public String getSynopssis() {

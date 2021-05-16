@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_fname"
@@ -39,6 +38,7 @@
         android:layout_height="wrap_content"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_add"
+        android:text="@string/button_friend_dateTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
