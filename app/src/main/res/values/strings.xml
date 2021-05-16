@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="fname">FIRSTNAME</string>
+    <string name="case_details">DETAILS</string>
+    <string name="edit_fname_hint">Enter your friend firstname,</string>
+    <string name="ckb_title">Solved</string>
+    <string name="lname">LASTNAME</string>
+    <string name="edit_lname_hint">Enter your friend lastname</string>
+</resources>
